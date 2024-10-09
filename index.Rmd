@@ -106,7 +106,6 @@ Next, we count the frequency of words used in each narrative reporting category.
 ```{r top15-data, fig.width=10, fig.height=11, include=TRUE}
 # Top 15 words 
 top15_tidy <- tidy_data %>%
-  count(word, theme, source) %>%
   filter(!str_detect(word, "^[0-9]*$")) %>%           # Exclude words that are just numbers
   count(word, theme) %>%
   group_by(theme) %>%
