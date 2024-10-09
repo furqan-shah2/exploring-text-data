@@ -192,7 +192,6 @@ category.
 ``` r
 # Top 15 words 
 top15_tidy <- tidy_data %>%
-  count(word, theme, source) %>%
   filter(!str_detect(word, "^[0-9]*$")) %>%           # Exclude words that are just numbers
   count(word, theme) %>%
   group_by(theme) %>%
@@ -205,9 +204,9 @@ glimpse(top15_tidy)
 
     ## Rows: 105
     ## Columns: 3
-    ## $ word  <chr> "business", "cash", "continued", "cost", "impact", "increase", "…
+    ## $ word  <chr> "revenue", "growth", "profit", "operating", "sales", "million", …
     ## $ theme <chr> "Financial", "Financial", "Financial", "Financial", "Financial",…
-    ## $ n     <int> 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 22, 22, 22, 22, 22, 23, …
+    ## $ n     <int> 807, 676, 670, 555, 478, 464, 433, 431, 423, 348, 337, 324, 281,…
 
 Now we use `ggplot` to visualize the top 15 most frequent words for each
 reporting category.
