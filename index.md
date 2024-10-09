@@ -272,8 +272,9 @@ tidy_data %>%
 
 ## Conclusion
 
-In this tutorial, I demonstrated how to conduct basic text data analysis
-using examples from companies’ annual reports. The focus was on
-cleaning, tokenizing, and visualizing the text. By following these
-steps, you can apply similar techniques to other textual datasets or any
-form of unstructured text data to extract insights.
+In this tutorial, I demonstrate how to conduct basic text data analysis
+using a dataset of 23 companies’ annual reports, with narratives
+classified in different reporting themes. The focus was on cleaning,
+tokenizing, and visualizing the text. By following these steps, one can
+apply similar techniques to other textual datasets or any form of
+unstructured text data to extract insights.
