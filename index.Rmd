@@ -2,12 +2,13 @@
 title: "Analyzing Text Data"
 author: "Furqan Shah"
 date: "2024-10-09"
-output: html_document
+output: github_document
 ---
+
 
 # Introduction
 
-In this tutorial, we will apply some basic textual analysis on data extracted from companies' annual reports. The example data used is self-annotated, where narratives are classified into the following categories for each company’s annual report: Financial, Human, Intellectual, Natural, Social & Relationship, Manufactured, and an Unclassified category. This classification helps us explore different aspects of the companies' reports and analyze how they communicate various types of information. I will go through basic textual analysis tasks including cleaning, tokenizing, analyzing, and visualizing text data.
+In this tutorial, we will apply some basic textual analysis on data extracted from 23 companies' annual reports (provided on the repository for this page). The example data used is self-annotated, where narratives are classified into the following categories for each company annual report: Financial, Human, Intellectual, Natural, Social & Relationship, Manufactured, and an Unclassified category. This classification helps us explore different aspects of the companies' reports and analyze how they communicate various types of information. I will go through basic textual analysis tasks including cleaning, tokenizing, analyzing, and visualizing text data.
 
 ## Step 1: Load and Install Required Libraries
 
@@ -95,11 +96,12 @@ glimpse(tidy_data)
 ```
 Notice the difference between the outputs of glimpse(data2) and glimpse(tidy_data). The previous code tokenized the text column, transforming each observation into individual words, allowing us to perform further analysis on a word-by-word basis.
 
+
 ## Step 4: Analyze and Visualize Text Data
 
 ### Top 15 Words
 
-Next, we count the frequency of words used in each narrative reporting category. Then, we select the top 15 most frequent words for each category for further analysis.
+Next, we count the frequency of words used in each narrative reporting category. Then, we select the top 15 most frequent words for each category.
 
 ```{r top15-data, fig.width=10, fig.height=11, include=TRUE}
 # Top 15 words 
@@ -144,7 +146,9 @@ theme_data <- tidy_data %>%
   count(word) %>%
   arrange(desc(n))
   
-wordcloud2(theme_data, size = 1, minSize = 5, color = "random-light")
+wordcloud(words = theme_data$word, freq = theme_data$n, 
+          scale = c(2, 0.5), random.order = FALSE, max.words = 200,
+          colors = brewer.pal(8, "Dark2"))
 ```
 
 
@@ -164,8 +168,9 @@ tidy_data %>%
 ```
 
 
+## Conclusion
 
-
+In this tutorial, I demonstrate how to conduct basic text data analysis using a dataset of 23 companies' annual reports, with narratives classified in different reporting themes. The focus was on cleaning, tokenizing, and visualizing the text. By following these steps, one can apply similar techniques to other textual datasets or any form of unstructured text data to extract insights.
 
 
 

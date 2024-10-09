@@ -6,15 +6,15 @@ Furqan Shah
 # Introduction
 
 In this tutorial, we will apply some basic textual analysis on data
-extracted from 23 companies’ annual reports. The example data used is
-self-annotated, where narratives are classified into the following
-categories for each company annual report: Financial, Human,
-Intellectual, Natural, Social & Relationship, Manufactured, and an
-Unclassified category. This classification helps us explore different
-aspects of the companies’ reports and analyze how they communicate
-various types of information. I will go through basic textual analysis
-tasks including cleaning, tokenizing, analyzing, and visualizing text
-data.
+extracted from 23 companies’ annual reports (provided on the repository
+for this page). The example data used is self-annotated, where
+narratives are classified into the following categories for each company
+annual report: Financial, Human, Intellectual, Natural, Social &
+Relationship, Manufactured, and an Unclassified category. This
+classification helps us explore different aspects of the companies’
+reports and analyze how they communicate various types of information. I
+will go through basic textual analysis tasks including cleaning,
+tokenizing, analyzing, and visualizing text data.
 
 ## Step 1: Load and Install Required Libraries
 
