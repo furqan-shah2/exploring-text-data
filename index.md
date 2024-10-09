@@ -6,9 +6,9 @@ Furqan Shah
 # Introduction
 
 In this tutorial, we will apply some basic textual analysis on data
-extracted from companies’ annual reports. The example data used is
+extracted from 23 companies’ annual reports. The example data used is
 self-annotated, where narratives are classified into the following
-categories for each company’s annual report: Financial, Human,
+categories for each company annual report: Financial, Human,
 Intellectual, Natural, Social & Relationship, Manufactured, and an
 Unclassified category. This classification helps us explore different
 aspects of the companies’ reports and analyze how they communicate
@@ -187,7 +187,7 @@ perform further analysis on a word-by-word basis.
 
 Next, we count the frequency of words used in each narrative reporting
 category. Then, we select the top 15 most frequent words for each
-category for further analysis.
+category.
 
 ``` r
 # Top 15 words 
@@ -269,3 +269,11 @@ tidy_data %>%
     ## Joining with `by = join_by(word)`
 
 ![](index_files/figure-gfm/wordcloud.2-data-1.png)<!-- -->
+
+## Conclusion
+
+In this tutorial, I demonstrated how to conduct basic text data analysis
+using examples from companies’ annual reports. The focus was on
+cleaning, tokenizing, and visualizing the text. By following these
+steps, you can apply similar techniques to other textual datasets or any
+form of unstructured text data to extract insights.
